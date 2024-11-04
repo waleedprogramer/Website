@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Table with TypeScript</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parallax overlay">
+      <nav>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" class="open-sidebar-btn"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <label for="sidebar-active" id="overlay"></label>
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-btn"
+            ><i class="fa-solid fa-xmark"></i
+          ></label>
+          <span class="home-links">Inventory Management System</span>
+          <a href="">Products</a>
+          <a href="">Users</a>
+          <a href="">Expenses</a>
+          <a href="">Contact</a>
+        </div>
+      </nav>
+      <!-- Parallax Section -->
+
+      <div class="content">
+        <h1>Inventory Mastery</h1>
+        <p>Transform chaos into order with our quirky inventory solution!</p>
+        <button class="btn"><a href="">Get Started</a></button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+
+
+    <section class="section">
+      <div class="heading">
+        <h1 class="mb-5">Latest Updates</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- First Card -->
+          <div class="col-lg-4 col-md-8 col-sm-12  mb-3">
+            <div class="card card rounded-3" style="width: 100%;">
+              <img src="images/update.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title ">New Features Unleashed!</h3>
+                <p class="card-text fs-5 text-dark-emphasis">Discover our latest features that make inventory management a breeze! Click to learn more!</p>
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-info rounded-5 p-3 text-light">Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Second Card -->
+          <div class="col-lg-4 col-md-8 col-sm-12">
+            <div class="card card rounded-3 mb-3" style="width: 100%;">
+              <img src="images/update2.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">User Feedback Revolutionizes</h3>
+                <p class="card-text fs-5 text-dark-emphasis">We listened to you! Our new updates are based on your feedback.We suggest check them out!</p>
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-info rounded-5 p-3 text-light">Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Third Card -->
+          <div class="col-lg-4 col-md-8 col-sm-12">
+            <div class="card card rounded-3 mb-3" style="width: 100%;">
+              <img src="images/update3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">Gadgets for Every Geek</h3>
+                <p class="card-text fs-5 text-dark-emphasis">From quirky to practical, we have gadgets galore! Dive in, explore, and discover your new favorite tech!</p>
+                <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-info rounded-5 p-3 text-light">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION REVIEW -->
+
+    <section class="section-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-8 col-sm-12  mb-5">
+            <h1 class="prime">1,000+</h1>
+            <h2 class="bold">Happy Users</h2>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-12  mb-5">
+            <h1 class="prime">99%+</h1>
+            <h2 class="bold">Satisfaction Rate
+            </h2>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-12  mb-">
+            <h1 class="prime">24/7</h1>
+            <h2 class="bold">Support Available</h2>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="parallax-2"></div>
+    <section class="section">
+    <div class="container-1">
+      <div class="heading">
+        <h1 class="mb-5">Sales and Report System</h1>
+      </div>
+      <table>
+        <thead>
+          <tr >
+            <th class="index-tr">Product Name</th>
+            <th class="index-tr">Quantity</th>
+            <th class="index-tr">Price</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <!-- Products will be inserted here by TypeScript -->
+        </tbody>
+      </table>
+    </div>
+         <div class="d-flex justify-content-center mt-5">
+                <a href="indexx.html" class="btn btn-info rounded-5 p-3 text-light">Add More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+  </section>
+
+  <section class="banner">
+    <div class="banner__container">
+      <h1>Real-time tracking for ultimate control! * User-friendly interface that even your grandma can use! *  
+      </h1>
+  </section>
+
+  <section class="section">
+    <div class="heading">
+      <h1 class="mb-5">Buzz</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-8 col-sm-12 ">
+          <h3 class="text-center text m-5">This system saved my bussiness</h3>
+          <div class="images">
+          <img class="image " src="images/buzz1.jpeg " alt="">
+        </div>
+          <h2 class="text-center text-2 m-5">Sarah Johnson</h2>
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-12 ">
+          <h3 class="text-center text m-5">I can finally breathe easy with my inventory!</h3>
+          <div class="images">
+          <img class="image " src="images/buzz2.jpeg " alt="">
+        </div>
+          <h2 class="text-center text-2 m-5">Mike Thompson</h2>
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-12 ">
+          <h3 class="text-center text m-5">It's like having a personal assistant for my stock!</h3>
+          <div class="images">
+          <img class="image " src="images/buzz3.jpeg " alt="">
+        </div>
+          <h2 class="text-center text-2 m-5">Emily Davis</h2>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="socials">
+      <h1 class="social-h1">JOIN OUR WILD RIDE</h1>
+      <div class="social-links">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="heading">
+      <h1 class="mb-5">Contact Us</h1>
+    </div>
+    <div class="contact-container">
+        <div class="contact-card">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form"> 
+                <input type="hidden" name="access_key" value="667bfbfd-ebcd-48e1-b2ed-6b8249f95454">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn btn btn-info"><a href="awaisbinmehmoodahmed@gmail.com"></a>Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->  
+
+<section class="credit">&copy; copyright @ 2024 by Waleed Mehmood</section>
+
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
